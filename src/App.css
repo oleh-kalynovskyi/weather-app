@@ -1,38 +1,120 @@
+body, html {
+    margin: 0px;
+    background: rgb(47, 159, 172);
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .App {
-  text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background: rgb(84, 204, 218);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    -webkit-box-shadow: 1px -1px 35px 36px rgba(52, 212, 219, 0.5);
+    -moz-box-shadow: 1px -1px 35px 36px rgba(52, 212, 219, 0.5);
+    box-shadow: 1px -1px 35px 36px rgba(52, 212, 219, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-app {
+    text-align: center;
+}
+.title-app h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 36px ;
+}
+.title-app p {
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+    font-size: 26px ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+form {
+    margin-bottom: 30px;
+    display: flex;
+}
+form input {
+    border: none;
+    outline: none;
+    padding: 10px;
+
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+form button {
+    border: none;
+    outline: none;
+    height: 100%;
+
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+form button:active {
+    background-color: navajowhite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+.Weather {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Weather p:first-child {
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Weather p {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    background: rgb(196, 231, 235);
+}
+.Weather p:hover {
+    background: rgb(243, 245, 245);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@media (max-width: 425px) {
+    form {
+        flex-direction: column;
+    }
+    form input {
+        margin-right: 0px;
+        width: 90%;
+    }
+    form button {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .Weather {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .Weather {
+        flex-direction: column;
+    }
 }
